@@ -64,17 +64,13 @@ you'll be in the same situation as if you were running in `Mixed` node.
 >
 > When you change a node's orchestrator, you can choose to run the node in a
 > mixed mode, with both Kubernetes and Swarm workloads. The `Mixed` type
-> is not intended for production use, and it may impact existing workloads
-> on the node.
+> may impact existing workloads on the node.
 >
 > This is because the two orchestrator types have different views of the node's
 > resources, and they don't know about each other's workloads. One orchestrator
 > can schedule a workload without knowing that the node's resources are already
 > committed to another workload that was scheduled by the other orchestrator.
 > When this happens, the node could run out of memory or other resources.
->
-> For this reason, we recommend against mixing orchestrators on a production
-> node. 
 {: .warning}
 
 ## Set the default orchestrator type for new nodes
